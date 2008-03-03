@@ -1,7 +1,8 @@
 <?php
 /**
  * SMS component for CakePHP using the Clickatell HTTP API interface.
- * @author Doug Bromley <doug@essentialsystems.co.uk>
+ *
+ * @author Doug Bromley <doug.bromley@gmail.com>
  * @copyright Doug Bromley
  *
  * This program is free software: you can redistribute it and/or modify
