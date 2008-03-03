@@ -65,6 +65,10 @@ class SmsComponent extends Object {
   * @param string $tel The telephone number in international format.  Not inclduing a leading "+" or "00".
   * @param string $message The text message to send to the handset.
   * @return string
+  * @see SmsComponent::api_id
+  * @see SmsComponent::api_user
+  * @see SmsComponent::api_pass
+  * @see SmsComponent::api_from
   */
   function postSms($tel, $message) {
     $postdata = http_build_query(
@@ -94,6 +98,10 @@ class SmsComponent extends Object {
   /**
   * Get the balance of your Clickatell account.
   * @return float
+  * @see SmsComponent::api_id
+  * @see SmsComponent::api_user
+  * @see SmsComponent::api_pass
+  * @see SmsComponent::api_from
   */
   function queryBalance() {
     $postdata = http_build_query(
