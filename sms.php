@@ -58,6 +58,15 @@ class SmsComponent extends Object {
   var $delivery_delay = null;
 
   /**
+   * If the text is delayed then switching this on "1"
+   * will cause it to be escalated to and alternative.
+   * Could cost more to send the message!
+   * @access public
+   * @var integer
+   */
+  var $escalate = 0;
+
+  /**
   * The Clickatell XML API url
   */
   const API_XML_URL = 'http://api.clickatell.com/xml/xml';
@@ -87,7 +96,8 @@ class SmsComponent extends Object {
         'from' => $this->from,
         'to' => $tel,
         'text' => $message,
-        'deliv_time' => $this->delivery_delay
+        'deliv_time' => $this->delivery_delay,
+        'escalate' => $this->escalate
       )
     );
 
