@@ -143,4 +143,33 @@ class SmsComponent extends Object {
     $response = file_get_contents(self::API_HTTP_URL.'getbalance', false, $context);
     return $response;
   }
+
+  /**
+   * By providing a phone number you can check if that number is covered and a message can be sent
+   * to this network/prefix/number.
+   * @param string $number The telephone number to check for coverage
+   * @return string
+   */
+  function queryCoverage($number) {
+    $postdata = http_build_query(
+      array(
+        'api_id' => $this->api_id,
+        'user' => $this->api_user,
+        'password' => $this->api_pass,
+        'msisdn' => $number
+      )
+    );
+
+    $opts = array('http' =>
+      array(
+        'method'  => 'POST',
+        'header'  => 'Content-type: application/x-www-form-urlencoded',
+        'content' => $postdata
+      )
+    );
+
+    $context  = stream_context_create($opts);
+    $response = file_get_contents(self::API_HTTP_URL.'routeCoverage.php', false, $context);
+    return $response;
+  }
 }
