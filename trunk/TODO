@@ -10,12 +10,17 @@ Any suggestions are very welcome.  Please email doug.bromley@gmail.com
 4. Delivery queuing.
 5. Callback URL support.
 6. Delivery acknowledgement support.
-7. Gateway escalation.
 8. Client message ID for internal message tracking.
 9. Unicode support.
 10. Validity period.
 11. Delete/stop queued messages.
-12. Coverage query.
 13. Message queuing.
 14. MMS support.
 15. Batch messaging.
+
+/**
+ * Done
+ */
+
+7. Gateway escalation.
+12. Coverage query.
