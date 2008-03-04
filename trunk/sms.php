@@ -48,6 +48,14 @@ class SmsComponent extends Object {
   */
   var $api_id = null;
 
+  /**
+   * The delay in minutes before the message is sent to the reciever.
+   * This doesn't affect the speed of the script execution - its a variable 
+   * used at the Clickatell end to delay message sending.
+   * @access public
+   * @var integer
+   */
+  var $delivery_delay = null;
 
   /**
   * The Clickatell XML API url
@@ -78,7 +86,8 @@ class SmsComponent extends Object {
         'password' => $this->api_pass,
         'from' => $this->from,
         'to' => $tel,
-        'text' => $message
+        'text' => $message,
+        'deliv_time' => $this->delivery_delay
       )
     );
 
