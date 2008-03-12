@@ -25,28 +25,28 @@ class SmsComponent extends Object {
   * @access public
   * @var string
   */
-  var $api_user = null;
+  public $api_user = null;
 
   /**
   * The password for the Clickatell API
   * @access public
   * @var string
   */
-  var $api_pass = null;
+  public $api_pass = null;
 
   /**
   * Who will be shown as the sender of the text at the receivers handset.
   * @access public
   * @var string
   */
-  var $api_from = null;
+  public $api_from = null;
 
   /**
   * The API id for this product.
   * @access public
   * @var string
   */
-  var $api_id = null;
+  public $api_id = null;
 
   /**
    * The delay in minutes before the message is sent to the reciever.
@@ -55,7 +55,7 @@ class SmsComponent extends Object {
    * @access public
    * @var integer
    */
-  var $delivery_delay = null;
+  public $delivery_delay = null;
 
   /**
    * If the text is delayed then switching this on "1"
@@ -64,7 +64,7 @@ class SmsComponent extends Object {
    * @access public
    * @var integer
    */
-  var $escalate = 0;
+  public $escalate = 0;
 
   /**
   * The Clickatell XML API url
